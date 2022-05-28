@@ -1,38 +1,219 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&family=Yeon+Sung&display=swap");
+
+body {
+  background-color: #f6f6f6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Nanum Pen Script", cursive;
+  min-height: 100vh;
+  margin: 0px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media (min-width: 650px) {
+  .App {
+    width: 640px;
   }
 }
 
-.App-header {
-  background-color: #282c34;
+@media (max-width: 650px) {
+  .App {
+    width: 90vw;
+  }
+}
+
+#root {
+  background-color: white;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.App {
   min-height: 100vh;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.Button {
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 18px;
+  white-space: nowrap;
+  font-family: "Nanum Pen Script";
+}
+
+.Header {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #e2e2e2;
+}
+
+.Header > div {
+  display: flex;
+}
+
+.Header .header_text {
+  width: 50%;
+  font-size: 25px;
+  justify-content: center;
+}
+
+.Header .header_btn_left {
+  width: 25%;
+  justify-content: start;
+}
+
+.Header .header_btn_right {
+  width: 25%;
+  justify-content: end;
+}
+
+.Header button {
+  font-family: "Nanum Pen Script";
+}
+
+/* TodoList */
+.TodoList .menu_wrapper {
+  margin-top: 20px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: baseline;
+}
+
+/* .TodoList .menu_wrapper .right_col {
+  flex-grow: 1;
+} */
+
+.TodoList .menu_wrapper .right_col button {
+  width: 100%;
+}
+
+.TodoList .control_menu {
+  margin-right: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #ececec;
+
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  cursor: pointer;
+  font-family: "Nanum Pen Script";
+  font-size: 18px;
+}
+
+/* TodoItem */
+.TodoItem {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #ececec;
+  display: flex;
+  justify-content: space-between;
+}
+
+.TodoItem .info_wrapper {
+  cursor: pointer;
+  flex-grow: 1;
+  margin-left: 20px;
+}
+
+.TodoItem .todo_date {
+  font-weight: bold;
+  font-size: 25px;
+  margin-bottom: 5px;
+}
+
+.TodoItem .todo_content {
+  font-size: 18px;
+}
+
+.TodoItem .btn_wrapper {
+  min-width: 70px;
+}
+
+/* TodoEditor */
+.TodoEditor {
+}
+
+.TodoEditor section {
+  margin-bottom: 40px;
+}
+
+.TodoEditor h4 {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.TodoEditor .input_date {
+  border: none;
+  border-radius: 5px;
+  background-color: #ececec;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  cursor: pointer;
+  font-family: "Nanum Pen Script";
+  font-size: 20px;
+}
+
+.TodoEditor textarea {
+  font-family: "Nanum Pen Script";
+  font-size: 20px;
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 200px;
+  resize: vertical;
+  border: none;
+  border-radius: 5px;
+  background-color: #ececec;
+  padding: 20px;
+}
+
+.TodoEditor .control_box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Detail {
+}
+
+.Detail section {
+  width: 100%;
+  margin-bottom: 100px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  text-align: center;
 }
 
-.App-link {
-  color: #61dafb;
+.Detail h4 {
+  font-size: 40px;
+  font-weight: bold;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.Detail .todo_content_wrapper {
+  width: 100%;
+  background-color: #ececec;
+  border-radius: 5px;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+
+.Detail .todo_content_wrapper p {
+  padding: 20px;
+  text-align: left;
+  font-size: 30px;
+  font-family: "Yeon Sung";
+  font-weight: 400;
+  line-height: 2.5;
 }
